@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <style>
+  body{
+  background-color: black;
+    display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+  }
+  .content{
+    position: absolute;
+      top: 150px;
+      left: 525px;
+      background-color: rgb(200, 255, 0,0.6);
+      padding: 50px;
+      font-weight: bold;
+      border-radius: 25px;
+      border-style:dashed;
+      box-shadow: 0px 0px 20px 20px  greenyellow;
+  }
+  
+  img{
+    height: 100%;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+  }
+    .bet {
+      margin-left: 10px;
+    }
+
+    .required::after {
+      content: "*";
+      color: red;
+    }
+
+    #last {
+      margin-left: 120px;
+    }
+
+    #mobile {
+      margin-left: 95px;
+    }
+
+    #confirm {
+      margin-left: 125px;
+    }
+    #txt,#txt2,#txt3,#txt4,#txt5,#txt6,#down,#sub,#res{
+      padding: 10px ;
+      border-radius: 20px;
+    }
+    #sub{
+      background-color: rgba(0, 30, 255);
+      color: white;
+      font-weight: bold;
+      padding: 15px;
+    }
+    #res{
+      background-color: rgba(15, 12, 12, 0.822);
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Registration</h1>
+
+  <form action="regform.html" onsubmit="return checkPassword()">
+    <table>
+      <tr>
+        <td><label class="required" for="firstname">FirstName</label>
+          <label class="required" id="last" for="lastname">LastName</label>
+          <br>
+          <input type="text" id="txt" name="fname" placeholder="e.g sandeep" required maxlength="50"><input class="bet"
+            id="txt2" type="text" name="lname" placeholder="e.g sahu" required maxlength="25">
+        </td>
+      </tr>
+      <tr>
+        <td><label class="required" for="email">EmailAddress</label>
+            <label class="required" id="mobile"for="mobile">Mobile Number</label>
+          <br>
+          <input type="email" id="txt3" name="email" placeholder="e.g demo@example.com" required maxlength="150"><input class="bet"
+            id="txt4" type="text" name="mobile" placeholder="e.g 82xxxxx" required maxlength="10">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <br>
+          <label for="gender">Gender</label>
+          <select name="drop" id="down">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><br>
+          <label class="required" for="password">Password</label>
+          <label class="required" id="confirm" for="confirm">Confirm Password</label>
+          <br>
+          <input type="password" id="txt5" name="pass" placeholder="e.g sahu@123" required><input class="bet" id="txt6"
+            type="password" name="ConfirmPass" placeholder="must be same as password" required>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <input type="submit" name="submit" id="sub" onclick="passvalue()">
+    <input type="reset" id="res" name="reset">
+  </form>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

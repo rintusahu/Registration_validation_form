@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit page</title>
+</head>
+<body>
+    <h1>Submit Page</h1>
+    <h2>
+        FIRSTNAME-:<span id="result"></span><br>
+        LASTNAME-:<span id="result2"></span><br>
+        EMAIL-ADDRESS-:<span id="result3"></span><br>
+        MOBILE-:<span id="result4"></span><br>
+        GENDER-:<span id="droping"></span><br>
+        PASSWORD-:<span id="result5"></span><br>
+        CONFIRM-PASS-:<span id="result6"></span>
+    </h2>
+    <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+        document.getElementById("result2").innerHTML=localStorage.getItem("textvalue2");
+        document.getElementById("result3").innerHTML=localStorage.getItem("textvalue3");
+        document.getElementById("droping").innerHTML=localStorage.getItem("dropvalue");
+        document.getElementById("result4").innerHTML=localStorage.getItem("textvalue4");
+        document.getElementById("result5").innerHTML=localStorage.getItem("textvalue5");
+        document.getElementById("result6").innerHTML=localStorage.getItem("textvalue6");
+    </script>
+</body>
+</html>
